@@ -8,7 +8,7 @@ export default async function BasicLayout({ children }: Props) {
   return (
     <>
       <Header />
-      <main className="overflow-scroll">{children}</main>
+      <main>{children}</main>
     </>
   );
 }

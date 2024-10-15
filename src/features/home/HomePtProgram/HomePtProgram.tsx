@@ -7,6 +7,7 @@ export default function HomePtProgram() {
 
   return (
     <Element
+      id="program"
       name="program"
       className="element p-2 pt-20 sm:relative sm:mx-auto sm:w-[1024px] sm:bg-cover sm:bg-center sm:p-0 sm:pt-40"
     >

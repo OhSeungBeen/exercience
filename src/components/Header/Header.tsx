@@ -33,12 +33,16 @@ export default function Header() {
   ];
 
   const onScrollTo = (name: string) => {
-    scroller.scrollTo(name, {
-      duration: 800,
-      delay: 0,
-      smooth: false,
-      offset: headerRef.current ? -headerRef.current.offsetHeight : 0,
-    });
+    if (!document) {
+      return;
+    }
+    document.getElementById(name)?.scrollIntoView();
+    // scroller.scrollTo(name, {
+    //   duration: 800,
+    //   delay: 0,
+    //   smooth: false,
+    //   offset: headerRef.current ? -headerRef.current.offsetHeight : 0,
+    // });
   };
 
   return (
