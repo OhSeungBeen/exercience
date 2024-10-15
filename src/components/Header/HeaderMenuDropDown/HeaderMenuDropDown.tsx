@@ -36,7 +36,13 @@ export default function HeaderMenuDropDown({ color, onScrollTo }: Props) {
         <li>
           <a
             className="cursor-pointer"
-            onClick={() => animateScroll.scrollToTop()}
+            onClick={() =>
+              animateScroll.scrollToTop({
+                duration: 1000,
+                delay: 500,
+                smooth: true,
+              })
+            }
           >
             {t('home')}
           </a>
