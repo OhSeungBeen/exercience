@@ -33,6 +33,7 @@ export default function Header() {
   ];
 
   const onScrollTo = (name: string) => {
+    console.log(name);
     if (!document) {
       return;
     }
@@ -44,10 +45,6 @@ export default function Header() {
     //   offset: headerRef.current ? -headerRef.current.offsetHeight : 0,
     // });
   };
-
-  useEffect(() => {
-    document.getElementById('profile')?.scrollIntoView();
-  }, [document]);
 
   return (
     <div
