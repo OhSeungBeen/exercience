@@ -12,7 +12,7 @@ export default function HomeSearch() {
           data-aos-offset="100"
           data-aos-delay="50"
           data-aos-duration="800"
-          className="text-center text-xl font-medium sm:text-5xl"
+          className="text-center text-2xl font-medium sm:text-5xl"
           dangerouslySetInnerHTML={{
             __html: t.raw('title') as string,
           }}

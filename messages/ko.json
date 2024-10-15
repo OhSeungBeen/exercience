@@ -12,7 +12,7 @@
   },
   "home": {
     "search": {
-      "title": "혹시 아래와 같은 <strong class='text-2xl sm:text-5xl font-extrabold text-primary'>증상</strong>으로 <strong class='text-2xl sm:text-5xl font-extrabold text-primary'>운동 전문가</strong>를 찾고 계신가요?",
+      "title": "혹시 아래와 같은 <strong class='text-3xl sm:text-5xl font-extrabold text-primary'>증상</strong>으로 <strong class='text-3xl sm:text-5xl font-extrabold text-primary'>운동 전문가</strong>를 찾고 계신가요?",
       "diseases": "만성 근육통, 거북목, 굽은 등, 수술 후 재활, 골반 불균형, 무릎,발목 부상, 오십견 허리디스크, 저림증상, 체중 감량 및 근력 증진"
     },
     "exercience": {
