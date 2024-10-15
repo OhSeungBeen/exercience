@@ -45,6 +45,10 @@ export default function Header() {
     // });
   };
 
+  useEffect(() => {
+    document.getElementById('profile')?.scrollIntoView();
+  }, [document]);
+
   return (
     <div
       ref={headerRef}
