@@ -33,7 +33,6 @@ export default function Header() {
   ];
 
   const onScrollTo = (name: string) => {
-    console.log(name);
     if (!document) {
       return;
     }
