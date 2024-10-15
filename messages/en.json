@@ -2,5 +2,62 @@
   "metadata": {
     "title": "exercience",
     "description": "We provide personalized recovery exercises based on scientific evidence tailored to individuals"
+  },
+  "header": {
+    "menu": {
+      "home": "HOME",
+      "program": "PROGRAM",
+      "profile": "PROFILE"
+    }
+  },
+  "home": {
+    "search": {
+      "title": "Are you looking for a <strong class='text-3xl font-extrabold text-primary sm:text-5xl'>symptom</strong> like this to find a <strong class='text-3xl font-extrabold text-primary sm:text-5xl'>fitness expert</strong>?",
+      "diseases": "Chronic muscle pain, turtle neck, curved back, post-surgery rehabilitation, pelvic imbalance,knee and ankle injuries, frozen shoulder, herniated disc, numbness symptoms, weight loss, muscle strengthening"
+    },
+    "exercience": {
+      "title": "<strong class='text-2xl font-extrabold sm:text-3xl'>exercience</strong> provides <strong class='text-2xl font-extrabold sm:text-3xl'>scientifically-based</strong> customized <strong class='text-2xl font-extrabold sm:text-3xl'>recovery exercises</strong> for individuals."
+    },
+    "ptProgram": {
+      "title1": "Chronic Musculoskeletal Pain Recovery",
+      "description1": "Muscle rehabilitation exercise program based on sports medicine",
+      "title2": "Posture/Body Correction",
+      "description2": "Personalized correction exercise program",
+      "title3": "Diet and Muscle Strength Improvement",
+      "description3": "Nutrition consulting and muscle strength enhancement exercise program"
+    },
+    "trainingProgram": {
+      "title1": "Consultation / Consulting",
+      "description1": "History, exercise goals, lifestyle check",
+      "title2": "Assessment and Analysis",
+      "description2": "Functional tests based on sports medicine, posture, flexibility, balance, muscle tone tests",
+      "title3": "Customized Exercise Prescription",
+      "title4": "Training",
+      "title5": "Re-assessment / Analysis"
+    },
+    "profile": {
+      "title": "<strong class='text-primary'>The same exercise</strong> is <strong class='text-primary'>different</strong> when guided by a health exercise specialist.",
+      "job": "Health Exercise Specialist",
+      "name": "Steven Oh",
+      "educationHistory": {
+        "title": "Education / Certification",
+        "history1": "UMASS Lowell Exercise Science (Currently enrolled)",
+        "history2": "Sejong University Physical Education (Leave of Absence)",
+        "history3": "‘08 - ’12: Judo Professional Athlete Team",
+        "history4": "NSCA - CSCS (Certified Strength and Conditioning Specialist by NSCA)",
+        "history5": "NASM - CPT (Certified Personal Trainer by NASM)",
+        "history6": "Ministry of Culture, Sports and Tourism Certified Leisure Sports Instructor (Bodybuilding)"
+      },
+      "workHistory": {
+        "title": "Work Experiences",
+        "history1": "‘18 - present: Exercience PT/Rehab",
+        "history2": "BHW Physical Therapy Internship",
+        "history3": "Bay State Physical Therapy Internship",
+        "history4": "Boston Physical Therapy Wellness Internship",
+        "history5": "SLI Nuero-Fit Corrective Exercise Specialist",
+        "history6": "KCAS Posture Correction Seminar",
+        "history7": "PT/CrossFit/Pilates Instructor in Korea"
+      }
+    }
   }
 }

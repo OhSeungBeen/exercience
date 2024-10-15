@@ -2,5 +2,62 @@
   "metadata": {
     "title": "exercience",
     "description": "과학적 근거 기반, 개인을 위한 맞춤 건강 회복운동을 제공합니다."
+  },
+  "header": {
+    "menu": {
+      "home": "홈",
+      "program": "프로그램",
+      "profile": "프로필"
+    }
+  },
+  "home": {
+    "search": {
+      "title": "혹시 아래와 같은 <strong class='text-2xl sm:text-5xl font-extrabold text-primary'>증상</strong>으로 <strong class='text-2xl sm:text-5xl font-extrabold text-primary'>운동 전문가</strong>를 찾고 계신가요?",
+      "diseases": "만성 근육통, 거북목, 굽은 등, 수술 후 재활, 골반 불균형, 무릎,발목 부상, 오십견 허리디스크, 저림증상, 체중 감량 및 근력 증진"
+    },
+    "exercience": {
+      "title": "<strong class='text-xl sm:text-3xl font-extrabold'>exercience </strong>는 <strong class='sm:text-3xl font-extrabold'>과학적 근거</strong>기반, 개인을 위한 <strong class='sm:text-3xl font-extrabold'>맞춤 건강 회복운동</strong>을 제공합니다."
+    },
+    "ptProgram": {
+      "title1": "근골격계 만성통증 회복",
+      "description1": "스포츠 의학 기반 근육 재활 운동 프로그램",
+      "title2": "자세/체형 교정",
+      "description2": "개인 맞춤형 교정 운동 프로그램",
+      "title3": "다이어트 및 근력 향상",
+      "description3": "영양 컨설팅 및 근력 증진 운동 프로그램"
+    },
+    "trainingProgram": {
+      "title1": "상담/컨설팅",
+      "description1": "History, 운동 목적, 생활 습관 체크",
+      "title2": "평가 및 분석",
+      "description2": "스포츠 의학기반 기능적 검사, 자세, 유연성, 밸런스, 근긴장도 검사",
+      "title3": "맞춤 운동 처방",
+      "title4": "트레이닝",
+      "title5": "재 평가 및 분석"
+    },
+    "profile": {
+      "title": "<strong class='text-primary'>같은 운동</strong>도 건강 운동 전문가를 통하면 <strong class='text-primary'> 다릅니다.</strong>",
+      "job": "건강 운동 전문가",
+      "name": "오승환",
+      "educationHistory": {
+        "title": "학력 / 자격증",
+        "history1": "UMASS 로웰 운동 과학 (재학 중)",
+        "history2": "세종대학교 체육학 (휴학 중)",
+        "history3": "‘08 - ’12: 유도 전문 선수팀",
+        "history4": "NSCA - CSCS (미국 체력관리 학회 공인 체력관리사)",
+        "history5": "NASM - CPT (미국 스포츠 의학회 공인 트레이너)",
+        "history6": "문화체육관광부 생활 체육 지도자 (보디빌딩)"
+      },
+      "workHistory": {
+        "title": "경력",
+        "history1": "‘18 - 현재: Exercience PT/Rehab",
+        "history2": "BHW 물리 치료 인턴십",
+        "history3": "Bay State 물리 치료 인턴십",
+        "history4": "Boston 물리 치료 웰니스 인턴십",
+        "history5": "SLI Nuero-Fit 교정 운동 전문가",
+        "history6": "KCAS 자세 교정 세미나",
+        "history7": "PT/크로스핏/필라테스 강사 (한국)"
+      }
+    }
   }
 }
