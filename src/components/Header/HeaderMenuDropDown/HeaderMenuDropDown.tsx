@@ -29,30 +29,27 @@ export default function HeaderMenuDropDown({ color, onScrollTo }: Props) {
         </svg>
       </div>
 
-      <ul className="menu dropdown-content menu-sm z-20 mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
+      <ul
+        tabIndex={0}
+        className="menu dropdown-content menu-sm z-20 mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+      >
         <li>
-          <button
+          <a
             className="cursor-pointer"
             onClick={() => animateScroll.scrollToTop()}
           >
             {t('home')}
-          </button>
+          </a>
         </li>
         <li>
-          <button
-            className="cursor-pointer"
-            onClick={() => onScrollTo('program')}
-          >
+          <a className="cursor-pointer" onClick={() => onScrollTo('program')}>
             {t('program')}
-          </button>
+          </a>
         </li>
         <li>
-          <button
-            className="cursor-pointer"
-            onClick={() => onScrollTo('profile')}
-          >
+          <a className="cursor-pointer" onClick={() => onScrollTo('profile')}>
             {t('profile')}
-          </button>
+          </a>
         </li>
       </ul>
     </div>
