@@ -36,7 +36,7 @@ export default function Header() {
     scroller.scrollTo(name, {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart',
+      smooth: false,
       offset: headerRef.current ? -headerRef.current.offsetHeight : 0,
     });
   };
