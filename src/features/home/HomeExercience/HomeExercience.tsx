@@ -4,7 +4,7 @@ export default function HomeExercience() {
   const t = useTranslations('home.exercience');
 
   return (
-    <div className="relative flex aspect-square justify-center bg-home-running bg-cover bg-center sm:aspect-auto sm:h-[420px]">
+    <div className="relative flex aspect-square justify-center bg-home-running bg-cover bg-center sm:ml-[calc(-50vw+50%)] sm:aspect-auto sm:h-[420px] sm:w-screen">
       <div className="absolute inset-0 bg-primary opacity-80" />
       {/* item2 */}
       <div

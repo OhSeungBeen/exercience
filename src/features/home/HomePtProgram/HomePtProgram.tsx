@@ -9,7 +9,7 @@ export default function HomePtProgram() {
     <Element
       id="program"
       name="program"
-      className="element p-2 pt-20 sm:relative sm:mx-auto sm:w-[1024px] sm:bg-cover sm:bg-center sm:p-0 sm:pt-40"
+      className="element p-2 pt-20 sm:relative sm:mx-auto sm:bg-cover sm:bg-center sm:p-0 sm:pt-40"
     >
       <div className="relative flex justify-center bg-cover bg-center sm:mt-0 sm:aspect-auto sm:flex-1 sm:bg-none">
         <div className="absolute inset-0 bg-white opacity-50 sm:hidden" />

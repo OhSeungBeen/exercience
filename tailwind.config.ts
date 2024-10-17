@@ -17,6 +17,10 @@ export default {
       'home-running': "url('/images/home/running.jpg')",
       'home-paper': "url('/images/home/paper.jpg')",
     },
+    aspectRatio: {
+      square: '1 / 1',
+      '190/271': '190 / 271',
+    },
   },
   plugins: [require('daisyui'), require('tailwindcss-animated')],
   daisyui: {

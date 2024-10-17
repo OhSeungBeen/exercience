@@ -8,7 +8,7 @@ export default async function BasicLayout({ children }: Props) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className="w-full lg:mx-auto lg:w-[1024px]">{children}</main>
     </>
   );
 }

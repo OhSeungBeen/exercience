@@ -22,7 +22,7 @@ export default function HomeTrainingProgram() {
   const t = useTranslations('home.trainingProgram');
 
   return (
-    <div className="relative flex justify-center bg-cover bg-center p-2 pb-32 pt-20 sm:mx-auto sm:mt-0 sm:aspect-auto sm:w-[1024px] sm:flex-1 sm:bg-none sm:p-0 sm:pb-60 sm:pt-40">
+    <div className="relative flex justify-center bg-cover bg-center p-2 pb-32 pt-20 sm:mx-auto sm:mt-0 sm:aspect-auto sm:flex-1 sm:bg-none sm:p-0 sm:pb-60 sm:pt-40">
       <div className="absolute inset-0 bg-white opacity-50 sm:hidden" />
       <div className="flex animate-fade-left flex-col justify-center gap-8 animate-delay-[1400ms] sm:gap-16 sm:p-0">
         <div className="text-center text-2xl font-extrabold sm:text-4xl">
