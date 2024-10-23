@@ -18,7 +18,6 @@ export default function HomePtProgram() {
           start: 'top top',
           scrub: true,
           anticipatePin: 1,
-          markers: true,
           pin: true,
         },
       })
@@ -47,13 +46,13 @@ export default function HomePtProgram() {
   return (
     <Element
       name="program"
-      className="pt-program-container mx-4 flex flex-col items-center justify-center gap-8 pt-[144px] sm:gap-16 sm:pt-[232px]"
+      className="pt-program-container mx-4 flex flex-col items-center justify-center gap-10 pt-[144px] sm:gap-16 sm:pt-[232px]"
     >
       <div className="title text-2xl font-extrabold sm:text-4xl">
         1:1 PT PROGRAMS
       </div>
-      <div className="flex flex-col gap-8 sm:gap-14">
-        <div className="program1 flex gap-3">
+      <div className="flex flex-col gap-10 sm:gap-14">
+        <div className="program1 flex gap-3 py-1">
           <div className="relative h-[82px] w-[82px] rounded-2xl bg-white shadow-md sm:h-[130px] sm:w-[130px]">
             <Image
               className="p-2"
@@ -69,7 +68,7 @@ export default function HomePtProgram() {
             <div className="text-xs sm:text-base">{t('description1')}</div>
           </div>
         </div>
-        <div className="program2 flex gap-3">
+        <div className="program2 flex gap-3 py-1">
           <div className="relative h-[82px] w-[82px] rounded-2xl bg-white shadow-md sm:h-[130px] sm:w-[130px]">
             <Image
               className="p-2"
@@ -85,7 +84,7 @@ export default function HomePtProgram() {
             <div className="text-xs sm:text-base">{t('description2')}</div>
           </div>
         </div>
-        <div className="program3 flex gap-3">
+        <div className="program3 flex gap-3 py-1">
           <div className="relative h-[82px] w-[82px] rounded-2xl bg-white shadow-md sm:h-[130px] sm:w-[130px]">
             <Image
               className="p-2"
