@@ -16,6 +16,7 @@ export default function HomeTrainingProgram() {
         scrollTrigger: {
           trigger: '.training-program-container',
           start: 'top top',
+          end: '+=' + window.innerHeight * 3,
           scrub: true,
           anticipatePin: 1,
           pin: true,
@@ -90,7 +91,7 @@ export default function HomeTrainingProgram() {
       .from('.training-program-container .rotate', {
         scale: 0,
         rotate: 360,
-        duration: 10,
+        duration: 1,
       });
   });
 

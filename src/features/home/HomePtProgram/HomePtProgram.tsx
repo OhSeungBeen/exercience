@@ -16,6 +16,7 @@ export default function HomePtProgram() {
         scrollTrigger: {
           trigger: '.pt-program-container',
           start: 'top top',
+          end: '+=' + window.innerHeight * 3,
           scrub: true,
           anticipatePin: 1,
           pin: true,
