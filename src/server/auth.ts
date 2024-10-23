@@ -4,9 +4,9 @@ import {
   type NextAuthOptions,
 } from 'next-auth';
 import { type Adapter } from 'next-auth/adapters';
+import { PrismaAdapter } from '@auth/prisma-adapter';
 
 import { db } from '@/server/db';
-import { PrismaAdapter } from '@auth/prisma-adapter';
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`

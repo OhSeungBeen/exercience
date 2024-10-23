@@ -3,11 +3,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { scroller } from 'react-scroll';
 import clsx from 'clsx';
+import useScrollPosition from '@react-hook/window-scroll';
 
 import HeaderMenu from '@/components/Header/HeaderMenu';
 import HeaderMenuDropDown from '@/components/Header/HeaderMenuDropDown';
-
-import useScrollPosition from '@react-hook/window-scroll';
 
 import HeaderLanguageSwitcher from './HeaderLanguageSwitcher';
 import HeaderLogo from './HeaderLogo';
@@ -45,7 +44,7 @@ export default function Header() {
     <div
       ref={headerRef}
       className={clsx(
-        'navbar transition-all duration-300 ease-in-out sm:px-7 sm:py-5',
+        'navbar transition-all duration-300 ease-in-out sm:px-7',
         isSticky
           ? 'sticky top-0 z-50 bg-primary opacity-90 shadow-xl'
           : 'bg-base-100',

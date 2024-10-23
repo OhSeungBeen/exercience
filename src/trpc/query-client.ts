@@ -1,5 +1,4 @@
 import SuperJSON from 'superjson';
-
 import {
   defaultShouldDehydrateQuery,
   QueryClient,

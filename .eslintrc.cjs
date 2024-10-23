@@ -45,7 +45,7 @@ const config = {
       'error',
       {
         groups: [
-          ['^next/*', '^react/*', '^@prisma/*', '^[a-z]'],
+          ['^next/*', '^react/*', '^[a-z]', '^@[a-z]'],
           ['^@/app/*'],
           ['^@/components/*'],
           ['^@/features/*'],

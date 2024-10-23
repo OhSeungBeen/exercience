@@ -1,9 +1,9 @@
 import { headers } from 'next/headers';
 import { cache } from 'react';
+import { createHydrationHelpers } from '@trpc/react-query/rsc';
 
 import { type AppRouter, createCaller } from '@/server/api/root';
 import { createTRPCContext } from '@/server/api/trpc';
-import { createHydrationHelpers } from '@trpc/react-query/rsc';
 
 import 'server-only';
 

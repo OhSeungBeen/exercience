@@ -1,4 +1,3 @@
-import { headers } from 'next/headers';
 import { type Config } from 'tailwindcss';
 
 export default {
@@ -19,6 +18,7 @@ export default {
     },
     aspectRatio: {
       square: '1 / 1',
+      '1/2': '1 / 2',
       '190/271': '190 / 271',
     },
   },
@@ -29,12 +29,10 @@ export default {
         light: {
           ...require('daisyui/src/theming/themes').light,
           primary: '#d12d31',
-          'base-content': '#000000',
         },
         dark: {
           ...require('daisyui/src/theming/themes').dark,
           primary: '#d12d31',
-          'base-content': '#ffffff',
         },
       },
     ],

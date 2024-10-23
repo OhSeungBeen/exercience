@@ -16,7 +16,7 @@
       "diseases": "Chronic muscle pain, turtle neck, curved back, post-surgery rehabilitation, pelvic imbalance,knee and ankle injuries, frozen shoulder, herniated disc, numbness symptoms, weight loss, muscle strengthening"
     },
     "exercience": {
-      "title": "<strong class='text-2xl font-extrabold sm:text-3xl'>exercience</strong> provides <strong class='text-2xl font-extrabold sm:text-3xl'>scientifically-based</strong> customized <strong class='text-2xl font-extrabold sm:text-3xl'>recovery exercises</strong> for individuals."
+      "title": "<strong class='text-[26px] text-primary text-2xl font-extrabold sm:text-5xl'>exercience</strong> provides <strong class='text-[26px] text-primary text-2xl font-extrabold sm:text-5xl'>scientifically-based</strong> customized <strong class='text-[26px] text-primary text-2xl font-extrabold sm:text-5xl'>recovery exercises</strong> for individuals."
     },
     "ptProgram": {
       "title1": "Chronic Musculoskeletal Pain Recovery",
@@ -33,7 +33,7 @@
       "description2": "Functional tests based on sports medicine, posture, flexibility, balance, muscle tone tests",
       "title3": "Customized Exercise Prescription",
       "title4": "Training",
-      "title5": "Re-assessment / Analysis"
+      "title5": "Reassessment/Analysis"
     },
     "profile": {
       "title": "<strong class='text-primary'>The same exercise</strong> is <strong class='text-primary'>different</strong> when guided by a health exercise specialist.",

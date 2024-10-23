@@ -18,7 +18,7 @@ export default function HeaderMenu({ color, onScrollTo }: Props) {
         <li>
           <div
             onClick={() => animateScroll.scrollToTop()}
-            className={clsx(`text-lg font-medium text-${color}`)}
+            className={clsx(`text-base font-medium text-${color}`)}
           >
             {t('home')}
           </div>
@@ -26,7 +26,7 @@ export default function HeaderMenu({ color, onScrollTo }: Props) {
         <li>
           <div
             onClick={() => onScrollTo('program')}
-            className={clsx(`text-lg font-medium text-${color}`)}
+            className={clsx(`text-base font-medium text-${color}`)}
           >
             {t('program')}
           </div>
@@ -34,7 +34,7 @@ export default function HeaderMenu({ color, onScrollTo }: Props) {
         <li>
           <div
             onClick={() => onScrollTo('profile')}
-            className={clsx(`text-lg font-medium text-${color}`)}
+            className={clsx(`text-base font-medium text-${color}`)}
           >
             {t('profile')}
           </div>

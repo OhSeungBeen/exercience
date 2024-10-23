@@ -11,12 +11,12 @@ type Props = {
 export default function HeaderLogo({ logoSrc, color }: Props) {
   return (
     <Link href="/" className="flex items-center justify-center gap-2">
-      <div className="relative h-7 w-7 sm:h-10 sm:w-10">
+      <div className="sm:h-9sm:w-9 relative h-7 w-7">
         <Image src={logoSrc} alt="logo" fill />
       </div>
       <div
         className={clsx(
-          'font-sen text-xl font-semibold sm:text-3xl',
+          'font-sen text-xl font-semibold sm:text-2xl',
           `text-${color}`,
         )}
       >
