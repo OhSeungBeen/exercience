@@ -9,14 +9,13 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function HomePtProgram() {
   const t = useTranslations('home.ptProgram');
-
   useGSAP(() => {
     gsap
       .timeline({
         scrollTrigger: {
           trigger: '.pt-program-container',
           start: 'top top',
-          end: '+=' + window.innerHeight * 3,
+          end: '+=' + window.innerHeight * 2,
           scrub: true,
           anticipatePin: 1,
           pin: true,

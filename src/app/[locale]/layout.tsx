@@ -4,10 +4,12 @@ import { getMessages, getTranslations } from 'next-intl/server';
 
 import { fonts } from '@/app/[locale]/fonts';
 
+import AuthProvider from '@/components/AuthProvider';
+import ScrollSmooth from '@/components/ScrollSmooth';
+
 import { TRPCReactProvider } from '@/trpc/react';
 
 import '@/styles/globals.css';
-import 'aos/dist/aos.css';
 
 export async function generateMetadata({
   params: { locale },
@@ -56,7 +58,9 @@ export default async function LocaleLayout({
       >
         <TRPCReactProvider>
           <NextIntlClientProvider messages={messages}>
-            {children}
+            <AuthProvider>
+              <ScrollSmooth>{children}</ScrollSmooth>
+            </AuthProvider>
           </NextIntlClientProvider>
         </TRPCReactProvider>
       </body>

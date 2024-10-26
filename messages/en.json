@@ -1,4 +1,5 @@
 {
+  "admin": {},
   "metadata": {
     "title": "exercience",
     "description": "We provide personalized recovery exercises based on scientific evidence tailored to individuals"
@@ -7,7 +8,15 @@
     "menu": {
       "home": "HOME",
       "program": "PROGRAM",
-      "profile": "PROFILE"
+      "profile": "PROFILE",
+      "review": "REVIEW"
+    },
+    "signInButton": {
+      "title": "Sign in"
+    },
+    "avatar": {
+      "admin": "Admin",
+      "signOut": "Sign Out"
     }
   },
   "home": {
@@ -59,5 +68,8 @@
         "history7": "PT/CrossFit/Pilates Instructor in Korea"
       }
     }
+  },
+  "signIn": {
+    "google": "Sign in with Google"
   }
 }

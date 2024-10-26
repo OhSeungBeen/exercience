@@ -2,10 +2,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { MdArrowDropDown } from 'react-icons/md';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function HomeTrainingProgram() {
   const t = useTranslations('home.trainingProgram');
@@ -16,7 +13,7 @@ export default function HomeTrainingProgram() {
         scrollTrigger: {
           trigger: '.training-program-container',
           start: 'top top',
-          end: '+=' + window.innerHeight * 3,
+          end: '+=' + window.innerHeight * 2,
           scrub: true,
           anticipatePin: 1,
           pin: true,

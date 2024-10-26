@@ -1,3 +1,4 @@
+import { reviewRouter } from '@/server/api/routers/review';
 import { createCallerFactory, createTRPCRouter } from '@/server/api/trpc';
 
 /**
@@ -6,7 +7,7 @@ import { createCallerFactory, createTRPCRouter } from '@/server/api/trpc';
  * All routers added in /api/routers should be manually added here.
  */
 export const appRouter = createTRPCRouter({
-  users: {},
+  reviews: reviewRouter,
 });
 
 // export type definition of API

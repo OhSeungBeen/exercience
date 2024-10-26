@@ -1,24 +1,21 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { animateScroll } from 'react-scroll';
-import clsx from 'clsx';
 
 type Props = {
-  color: 'white' | 'black';
   onScrollTo: (name: string) => void;
 };
 
-export default function HeaderMenu({ color, onScrollTo }: Props) {
+export default function HeaderMenu({ onScrollTo }: Props) {
   const t = useTranslations('header.menu');
 
   return (
-    <div className={clsx('navbar-center hidden sm:flex', `text-${color}}`)}>
+    <div className="navbar-center hidden text-black lg:flex">
       <ul className="menu menu-horizontal px-1">
         <li>
           <div
-            onClick={() => animateScroll.scrollToTop()}
-            className={clsx(`text-base font-medium text-${color}`)}
+            onClick={() => window.scrollTo({ top: 0 })}
+            className="header-sticky-change-color text-base font-medium text-black"
           >
             {t('home')}
           </div>
@@ -26,7 +23,7 @@ export default function HeaderMenu({ color, onScrollTo }: Props) {
         <li>
           <div
             onClick={() => onScrollTo('program')}
-            className={clsx(`text-base font-medium text-${color}`)}
+            className="header-sticky-change-color text-base font-medium text-black"
           >
             {t('program')}
           </div>
@@ -34,9 +31,17 @@ export default function HeaderMenu({ color, onScrollTo }: Props) {
         <li>
           <div
             onClick={() => onScrollTo('profile')}
-            className={clsx(`text-base font-medium text-${color}`)}
+            className="header-sticky-change-color text-base font-medium text-black"
           >
             {t('profile')}
+          </div>
+        </li>
+        <li>
+          <div
+            onClick={() => onScrollTo('review')}
+            className="header-sticky-change-color text-base font-medium text-black"
+          >
+            {t('review')}
           </div>
         </li>
       </ul>

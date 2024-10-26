@@ -1,66 +1,72 @@
-import {
-  type DefaultSession,
-  getServerSession,
-  type NextAuthOptions,
-} from 'next-auth';
+import NextAuth, { type DefaultSession } from 'next-auth';
 import { type Adapter } from 'next-auth/adapters';
+import GoogleProvider from 'next-auth/providers/google';
 import { PrismaAdapter } from '@auth/prisma-adapter';
+import { type Role } from '@prisma/client';
 
+import { env } from '@/env';
 import { db } from '@/server/db';
 
-/**
- * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
- * object and keep type safety.
- *
- * @see https://next-auth.js.org/getting-started/typescript#module-augmentation
- */
 declare module 'next-auth' {
   interface Session extends DefaultSession {
     user: {
       id: string;
-      // ...other properties
-      // role: UserRole;
+      role: Role;
     } & DefaultSession['user'];
   }
 
-  // interface User {
-  //   // ...other properties
-  //   // role: UserRole;
-  // }
+  interface User {
+    role: Role;
+  }
+}
+declare module '@auth/core/jwt' {
+  interface JWT {
+    role: Role;
+  }
 }
 
-/**
- * Options for NextAuth.js used to configure adapters, providers, callbacks, etc.
- *
- * @see https://next-auth.js.org/configuration/options
- */
-export const authOptions: NextAuthOptions = {
-  callbacks: {
-    session: ({ session, user }) => ({
-      ...session,
-      user: {
-        ...session.user,
-        id: user.id,
-      },
-    }),
-  },
+export const {
+  handlers,
+  signIn,
+  signOut,
+  auth: getSession,
+  unstable_update: update,
+} = NextAuth({
   adapter: PrismaAdapter(db) as Adapter,
   providers: [
-    /**
-     * ...add more providers here.
-     *
-     * Most other providers require a bit more work than the Discord provider. For example, the
-     * GitHub provider requires you to add the `refresh_token_expires_in` field to the Account
-     * model. Refer to the NextAuth.js docs for the provider you want to use. Example:
-     *
-     * @see https://next-auth.js.org/providers/github
-     */
+    GoogleProvider({
+      clientId: env.GOOGLE_CLIENT_ID,
+      clientSecret: env.GOOGLE_CLIENT_SECRET,
+    }),
   ],
-};
-
-/**
- * Wrapper for `getServerSession` so that you don't need to import the `authOptions` in every file.
- *
- * @see https://next-auth.js.org/configuration/nextjs
- */
-export const getServerAuthSession = () => getServerSession(authOptions);
+  session: {
+    strategy: 'jwt',
+    maxAge: 60 * 60 * 24,
+  },
+  callbacks: {
+    jwt: ({ token, user }) => {
+      if (user?.role) token.role = user.role;
+      return token;
+    },
+    session: ({ session, token }) => {
+      if (token?.role) session.user.role = token.role;
+      return session;
+    },
+    redirect: ({ url, baseUrl }) => {
+      if (url.startsWith('/')) return `${baseUrl}${url}`;
+      if (url) {
+        const { search, origin } = new URL(url);
+        const callbackUrl = new URLSearchParams(search).get('callbackUrl');
+        if (callbackUrl)
+          return callbackUrl.startsWith('/')
+            ? `${baseUrl}${callbackUrl}`
+            : callbackUrl;
+        if (origin === baseUrl) return url;
+      }
+      return baseUrl;
+    },
+  },
+  pages: {
+    signIn: 'sign-in',
+  },
+});

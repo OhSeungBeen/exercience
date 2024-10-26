@@ -1,4 +1,107 @@
 {
+  "admin": {
+    "theme": {
+      "dark": "다크모드",
+      "light": "라이트모드",
+      "system": "시스템"
+    },
+    "list": {
+      "header": {
+        "add": {
+          "label": "추가"
+        },
+        "search": {
+          "result": "{{count}} 항목",
+          "placeholder": "검색"
+        }
+      },
+      "footer": {
+        "indicator": {
+          "showing": "보기",
+          "to": "에서",
+          "of": "중"
+        }
+      },
+      "row": {
+        "actions": {
+          "delete": {
+            "label": "삭제"
+          },
+          "export": "{{format}}로 내보내기"
+        }
+      },
+      "empty": {
+        "label": "{{resource}}을(를) 찾을 수 없습니다",
+        "caption": "{{resource}} 새 항목을 생성하여 시작하세요"
+      }
+    },
+    "selector": {
+      "loading": "로딩 중"
+    },
+    "form": {
+      "create": {
+        "succeed": "생성 완료"
+      },
+      "update": {
+        "succeed": "업데이트 완료"
+      },
+      "delete": {
+        "succeed": "삭제 완료"
+      },
+      "validation": {
+        "error": "검증 오류"
+      },
+      "button": {
+        "delete": {
+          "label": "삭제"
+        },
+        "save": {
+          "label": "저장"
+        },
+        "save_edit": {
+          "label": "저장하고 편집 계속"
+        }
+      },
+      "widgets": {
+        "file_upload": {
+          "label": "파일 선택",
+          "delete": "삭제"
+        },
+        "multiselect": {
+          "select": "선택"
+        }
+      },
+      "user": {
+        "email": {
+          "error": "잘못된 이메일 입니다."
+        }
+      }
+    },
+    "export": {
+      "label": "내보내기"
+    },
+    "model": {
+      "User": {
+        "name": "회원",
+        "plural": "회원",
+        "fields": {
+          "id": "ID",
+          "email": "이메일",
+          "name": "이름",
+          "emailVerified": "이메일 인증 날짜",
+          "image": "이미지URL",
+          "created_at": "가입일시",
+          "update_at": "수정일시",
+          "accounts": "소셜계정",
+          "sessions": "로그인세션"
+        }
+      },
+      "Review": {
+        "name": "리뷰",
+        "plural": "리뷰"
+      }
+    }
+  },
   "metadata": {
     "title": "exercience",
     "description": "과학적 근거 기반, 개인을 위한 맞춤 건강 회복운동을 제공합니다."
@@ -7,7 +110,15 @@
     "menu": {
       "home": "홈",
       "program": "프로그램",
-      "profile": "프로필"
+      "profile": "프로필",
+      "review": "리뷰"
+    },
+    "signInButton": {
+      "title": "로그인"
+    },
+    "avatar": {
+      "admin": "관리자",
+      "signOut": "로그아웃"
     }
   },
   "home": {
@@ -59,5 +170,8 @@
         "history7": "PT/크로스핏/필라테스 강사 (한국)"
       }
     }
+  },
+  "signIn": {
+    "google": "Google 계정으로 로그인"
   }
 }

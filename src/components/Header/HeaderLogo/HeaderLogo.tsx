@@ -1,25 +1,18 @@
 import Image from 'next/image';
-import clsx from 'clsx';
 
 import { Link } from '@/i18n/routing';
 
 type Props = {
-  logoSrc: string;
-  color: 'white' | 'black';
+  logo: string;
 };
 
-export default function HeaderLogo({ logoSrc, color }: Props) {
+export default function HeaderLogo({ logo }: Props) {
   return (
     <Link href="/" className="flex items-center justify-center gap-2">
       <div className="sm:h-9sm:w-9 relative h-7 w-7">
-        <Image src={logoSrc} alt="logo" fill />
+        <Image src={logo} alt="logo" fill />
       </div>
-      <div
-        className={clsx(
-          'font-sen text-xl font-semibold sm:text-2xl',
-          `text-${color}`,
-        )}
-      >
+      <div className="header-sticky-change-color font-sen text-xl font-semibold text-black sm:text-2xl">
         exercience
       </div>
     </Link>

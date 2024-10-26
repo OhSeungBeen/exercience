@@ -58,7 +58,8 @@ const config = {
     ],
     'simple-import-sort/exports': 'error',
     'no-console': ['error', { allow: ['warn', 'error'] }],
-    '@typescript-eslint/no-unsafe-assignment': 'warn',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
   },
 };
 module.exports = config;
