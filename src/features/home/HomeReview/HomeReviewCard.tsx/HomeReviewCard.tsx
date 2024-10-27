@@ -1,4 +1,5 @@
-import { BsPerson } from 'react-icons/bs';
+import { ImUser } from 'react-icons/im';
+import { MdOpenInNew } from 'react-icons/md';
 
 type Props = {
   title: string;
@@ -8,16 +9,19 @@ type Props = {
 
 export default function HomeReviewCard({ title, name, content }: Props) {
   return (
-    <div className="card h-[400px] overflow-hidden bg-base-100 shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px]">
-      <div className="flex gap-4 pl-4 pr-4 pt-4">
-        <div className="avatar placeholder flex items-center justify-center">
-          <div className="h-14 w-14 rounded-full bg-neutral text-neutral-content">
-            <BsPerson className="h-8 w-8" />
+    <div className="card h-[441px] cursor-pointer overflow-hidden break-normal bg-base-100 shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] hover:!-translate-y-2">
+      <button className="absolute right-3 top-3">
+        <MdOpenInNew className="h-5 w-5 text-gray-500" />
+      </button>
+      <div className="flex items-center gap-4 px-8 pt-8">
+        <div className="avatar placeholder">
+          <div className="relative flex h-14 w-14 overflow-hidden rounded-full bg-base-300">
+            <ImUser className="absolute -bottom-1 h-14 w-14 text-base-100" />
           </div>
         </div>
         <div className="flex flex-1 flex-col justify-center gap-1">
-          <div className="text-[13px] font-semibold">{title}</div>
-          <div className="text-xs">{name}</div>
+          <div className="text-[13px] font-bold">{title}</div>
+          <div className="text-xs text-gray-500">{name}</div>
           <div className="rating">
             <input
               type="radio"
@@ -53,9 +57,9 @@ export default function HomeReviewCard({ title, name, content }: Props) {
           </div>
         </div>
       </div>
-      <div className="card-body p-4">
+      <div className="card-body px-8 pb-2 pt-6">
         <div
-          className="line-clamp-[17] text-[11px]"
+          className="line-clamp-[19] text-[11px]"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </div>
