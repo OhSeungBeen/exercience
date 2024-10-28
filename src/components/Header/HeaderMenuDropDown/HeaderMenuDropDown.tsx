@@ -10,10 +10,14 @@ export default function HeaderMenuDropDown({ onScrollTo }: Props) {
 
   return (
     <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+      <div
+        tabIndex={0}
+        role="button"
+        className="btn btn-ghost px-2 sm:px-4 lg:hidden"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="header-sticky-change-color h-5 w-5 text-black"
+          className="header-sticky-change-color sm: h-5 w-5 sm:h-6 sm:w-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

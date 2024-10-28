@@ -23,28 +23,24 @@ export default function HeaderLanguageSwitcher({ languages }: Props) {
 
   return (
     <div className="dropdown dropdown-end">
-      <div
-        tabIndex={0}
-        role="button"
-        className="btn btn-ghost btn-sm rounded-btn"
-      >
+      <div tabIndex={0} role="button" className="btn btn-ghost px-2 sm:px-4">
         <div className={`relative h-[15px] w-5 sm:h-[18px] sm:w-6`}>
           {language && (
             <Image src={language.image} alt={`flag-${language?.locale}`} fill />
           )}
         </div>
         <div
-          className={`header-sticky-change-color text-xs text-black sm:text-sm`}
+          className={`header-sticky-change-color hidden text-xs sm:block sm:text-base`}
         >
           {language?.label}
         </div>
         <BsChevronDown
-          className={`header-sticky-change-color h-3 w-3 text-black sm:h-4 sm:w-4`}
+          className={`header-sticky-change-color hidden h-3 w-3 sm:block sm:h-4 sm:w-4`}
         />
       </div>
       <ul
         tabIndex={0}
-        className="menu dropdown-content z-20 mt-4 rounded-box bg-base-100 p-2 shadow"
+        className="menu dropdown-content z-20 mt-3 rounded-box bg-base-100 p-2 shadow"
       >
         {languages.map((language) => (
           <li key={language.locale}>
@@ -64,7 +60,7 @@ export default function HeaderLanguageSwitcher({ languages }: Props) {
                   fill
                 />
               </div>
-              <div className="text-xs sm:text-sm">{language.label}</div>
+              <div className="text-xs sm:text-base">{language.label}</div>
             </Link>
           </li>
         ))}

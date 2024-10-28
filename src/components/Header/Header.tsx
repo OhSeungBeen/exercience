@@ -52,7 +52,7 @@ export default function Header() {
           'sticky top-0 z-50 bg-primary opacity-90 shadow-xl [&_.header-sticky-change-color]:text-white',
       )}
     >
-      <div>
+      <div className="flex items-center">
         <HeaderMenuDropDown onScrollTo={onScrollTo} />
         <HeaderLogo
           logo={
@@ -64,18 +64,20 @@ export default function Header() {
       </div>
       <div className="gap-1 sm:gap-6">
         <HeaderMenu onScrollTo={onScrollTo} />
-        <HeaderLanguageSwitcher languages={languages} />
-        {/* {status === 'loading' && (
+        <div className="flex items-center">
+          <HeaderLanguageSwitcher languages={languages} />
+          {/* {status === 'loading' && (
           <div className="skeleton h-8 min-w-[72px]"></div>
         )} */}
-        {status === 'unauthenticated' && <HeaderSignInButton />}
-        {status === 'authenticated' && (
-          <HeaderUserAvatar
-            userName={session.user.name}
-            userImage={session.user.image}
-            userRole={session.user.role}
-          />
-        )}
+          {status === 'unauthenticated' && <HeaderSignInButton />}
+          {status === 'authenticated' && (
+            <HeaderUserAvatar
+              userName={session.user.name}
+              userImage={session.user.image}
+              userRole={session.user.role}
+            />
+          )}
+        </div>
       </div>
     </header>
   );

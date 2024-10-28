@@ -21,25 +21,27 @@ export default function HeaderUserAvatar({
   return (
     <div className="dropdown dropdown-end">
       {userImage ? (
-        <div tabIndex={0}>
+        <div tabIndex={0} role="button" className="btn btn-circle btn-ghost">
           <div className="avatar flex cursor-pointer">
-            <div className="relative h-10 w-10 rounded-full sm:h-12 sm:w-12">
+            <div className="relative h-9 w-9 rounded-full sm:h-12 sm:w-12">
               <Image src={userImage} fill alt="user-image" />
             </div>
           </div>
         </div>
       ) : (
-        <div tabIndex={0} className="avatar placeholder cursor-pointer">
-          <div className="h-10 w-10 rounded-full bg-neutral text-neutral-content sm:h-12 sm:w-12">
-            <span className="text-xl">
-              {userName ? userName.charAt(0) : ''}
-            </span>
+        <div tabIndex={0} role="button" className="btn btn-circle btn-ghost">
+          <div className="avatar placeholder cursor-pointer">
+            <div className="h-9 w-9 rounded-full bg-neutral text-neutral-content sm:h-12 sm:w-12">
+              <div className="text-xl">
+                {userName ? userName.charAt(0) : ''}
+              </div>
+            </div>
           </div>
         </div>
       )}
       <ul
         tabIndex={0}
-        className="menu dropdown-content z-20 rounded-box bg-base-100 p-2 shadow"
+        className="menu dropdown-content z-20 mt-3 rounded-box bg-base-100 p-2 shadow"
       >
         {userRole === 'ADMIN' && (
           <li>
