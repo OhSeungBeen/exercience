@@ -3,13 +3,13 @@ import { MdOpenInNew } from 'react-icons/md';
 
 type Props = {
   title: string;
-  name: string;
+  writer: string;
   content: string;
 };
 
-export default function HomeReviewCard({ title, name, content }: Props) {
+export default function HomeReviewCard({ title, writer, content }: Props) {
   return (
-    <div className="card h-[441px] cursor-pointer overflow-hidden break-normal bg-base-100 shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] hover:!-translate-y-2">
+    <div className="card h-[485px] cursor-pointer overflow-hidden break-normal bg-base-100 shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] hover:!-translate-y-2">
       <button className="absolute right-3 top-3">
         <MdOpenInNew className="h-5 w-5 text-gray-500" />
       </button>
@@ -21,7 +21,7 @@ export default function HomeReviewCard({ title, name, content }: Props) {
         </div>
         <div className="flex flex-1 flex-col justify-center gap-1">
           <div className="text-[13px] font-bold">{title}</div>
-          <div className="text-xs text-gray-500">{name}</div>
+          <div className="text-xs text-gray-500">{writer}</div>
           <div className="rating">
             <input
               type="radio"
@@ -57,7 +57,7 @@ export default function HomeReviewCard({ title, name, content }: Props) {
           </div>
         </div>
       </div>
-      <div className="card-body px-8 pb-2 pt-6">
+      <div className="card-body px-8 pb-8 pt-6">
         <div
           className="line-clamp-[19] text-[11px]"
           dangerouslySetInnerHTML={{ __html: content }}

@@ -4,12 +4,12 @@ import { ImUser } from 'react-icons/im';
 
 type Props = {
   title: string;
-  name: string;
+  writer: string;
   content: string;
 };
 
 const HomeReviewModal = forwardRef<HTMLDialogElement, Props>(
-  ({ title, name, content }, ref) => {
+  ({ title, writer, content }, ref) => {
     return (
       <dialog
         ref={ref}
@@ -17,7 +17,7 @@ const HomeReviewModal = forwardRef<HTMLDialogElement, Props>(
         className="modal modal-top sm:modal-middle"
         data-lenis-prevent
       >
-        <div className="card modal-box h-screen max-h-screen cursor-pointer overflow-auto break-normal rounded-none bg-base-100 p-0 sm:h-auto sm:max-h-[calc(100vh-5rem)]">
+        <div className="card modal-box h-screen max-h-screen cursor-pointer overflow-auto break-normal rounded-none bg-base-100 p-0 sm:h-auto sm:max-h-[calc(100vh-5rem)] sm:max-w-96">
           <form method="dialog">
             <button className="absolute right-3 top-3">
               <BsXLg className="h-5 w-5 text-gray-500" />
@@ -31,7 +31,7 @@ const HomeReviewModal = forwardRef<HTMLDialogElement, Props>(
             </div>
             <div className="flex flex-1 flex-col justify-center gap-1">
               <div className="text-[13px] font-bold">{title}</div>
-              <div className="text-xs text-gray-500">{name}</div>
+              <div className="text-xs text-gray-500">{writer}</div>
               <div className="rating">
                 <input
                   type="radio"
@@ -67,7 +67,7 @@ const HomeReviewModal = forwardRef<HTMLDialogElement, Props>(
               </div>
             </div>
           </div>
-          <div className="card-body px-8 pb-2 pt-6">
+          <div className="card-body px-8 pb-8 pt-6">
             <div
               className="text-[11px]"
               dangerouslySetInnerHTML={{ __html: content }}

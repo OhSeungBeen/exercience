@@ -216,7 +216,7 @@
         "id": {
           "type": "string"
         },
-        "name": {
+        "writer": {
           "type": "string"
         },
         "title": {
@@ -231,6 +231,14 @@
         "is_best": {
           "type": "boolean",
           "default": false
+        },
+        "locale": {
+          "type": "string",
+          "default": "EN",
+          "enum": [
+            "EN",
+            "KO"
+          ]
         },
         "created_at": {
           "type": "string",
@@ -252,7 +260,7 @@
         }
       },
       "required": [
-        "name",
+        "writer",
         "title",
         "content",
         "score"

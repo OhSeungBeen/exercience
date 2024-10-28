@@ -11,15 +11,22 @@ export const reviewRouter = createTRPCRouter({
     .input(
       z.object({
         isBest: z.boolean().optional(),
+        locale: z.enum(['EN', 'KO']).optional().default('EN'),
       }),
     )
     .query(async ({ ctx, input }) => {
       const reviews = await ctx.db.review.findMany({
         where: {
           is_best: input.isBest,
+          locale: input.locale,
         },
       });
 
-      return reviews;
+      return reviews.map((review) => ({
+        id: review.id,
+        writer: review.writer,
+        title: review.title,
+        content: review.content,
+      }));
     }),
 });

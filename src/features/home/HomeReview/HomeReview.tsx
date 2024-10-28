@@ -1,8 +1,9 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useRef, useState } from 'react';
 import { Element } from 'react-scroll';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { type Locale } from '@prisma/client';
 
 import HomeReviewCard from '@/features/home/HomeReview/HomeReviewCard.tsx';
 import HomeReviewModal from '@/features/home/HomeReview/HomeReviewModal';
@@ -15,8 +16,11 @@ import 'swiper/css/pagination';
 export default function HomeReview() {
   const t = useTranslations('home.review');
 
+  const locale = useLocale();
+
   const { data: reviews } = api.reviews.getBestReviews.useQuery({
     isBest: true,
+    locale: locale.toUpperCase() as Locale,
   });
 
   const HomeReviewModalRef = useRef<HTMLDialogElement>(null);
@@ -27,7 +31,7 @@ export default function HomeReview() {
     HomeReviewModalRef.current?.showModal();
   };
 
-  if (reviews === undefined) {
+  if (!reviews) {
     return null;
   }
 
@@ -55,10 +59,10 @@ export default function HomeReview() {
           //   pauseOnMouseEnter: true,
           // }}
           breakpoints={{
-            '640': { slidesPerView: 2 },
-            '768': { slidesPerView: 3 },
-            '1024': { slidesPerView: 3 },
-            '1280': { slidesPerView: 4 },
+            '640': { slidesPerView: 2, centeredSlides: true },
+            '768': { slidesPerView: 3, centeredSlides: true },
+            '1024': { slidesPerView: 3, centeredSlides: true },
+            '1280': { slidesPerView: 4, centeredSlides: true },
           }}
           modules={[Pagination, Autoplay]}
           className="w-full !p-4"
@@ -70,7 +74,7 @@ export default function HomeReview() {
             >
               <HomeReviewCard
                 title={review.title}
-                name={review.name}
+                writer={review.writer}
                 content={review.content}
               />
             </SwiperSlide>
@@ -80,7 +84,7 @@ export default function HomeReview() {
           <HomeReviewModal
             ref={HomeReviewModalRef}
             title={reviews[activeReviewIndex].title}
-            name={reviews[activeReviewIndex].name}
+            writer={reviews[activeReviewIndex].writer}
             content={reviews[activeReviewIndex].content}
           />
         )}
