@@ -4,12 +4,13 @@ import { getMessages, getTranslations } from 'next-intl/server';
 
 import { fonts } from '@/app/[locale]/fonts';
 
-import AuthProvider from '@/components/AuthProvider';
-import ScrollSmooth from '@/components/ScrollSmooth';
-
+import AuthProvider from '@/providers/AuthProvider';
+import ScrollSmoothProvider from '@/providers/ScrollSmoothProvider';
+import ThemeProvider from '@/providers/ThemeProvider';
 import { TRPCReactProvider } from '@/trpc/react';
 
 import '@/styles/globals.css';
+import clsx from 'clsx';
 
 export async function generateMetadata({
   params: { locale },
@@ -50,16 +51,19 @@ export default async function LocaleLayout({
       lang={locale}
       data-theme="light"
       className={`${fonts.sen.variable} ${fonts.pretendard.variable}`}
+      suppressHydrationWarning
     >
       <body
-        className={
-          locale === 'en' ? fonts.sen.className : fonts.pretendard.className
-        }
+        className={clsx(
+          locale === 'en' ? fonts.sen.className : fonts.pretendard.className,
+        )}
       >
         <TRPCReactProvider>
           <NextIntlClientProvider messages={messages}>
             <AuthProvider>
-              <ScrollSmooth>{children}</ScrollSmooth>
+              <ThemeProvider>
+                <ScrollSmoothProvider>{children}</ScrollSmoothProvider>
+              </ThemeProvider>
             </AuthProvider>
           </NextIntlClientProvider>
         </TRPCReactProvider>

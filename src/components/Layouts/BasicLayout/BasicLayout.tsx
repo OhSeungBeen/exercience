@@ -8,7 +8,7 @@ export default function BasicLayout({ children }: Props) {
   return (
     <>
       <Header />
-      <main className="w-full lg:mx-auto lg:w-[1024px]">{children}</main>
+      <main className="bg-base-100">{children}</main>
       <footer className="h-[400px] bg-zinc-800"></footer>
     </>
   );

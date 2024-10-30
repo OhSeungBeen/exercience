@@ -1,18 +1,12 @@
-import Image from 'next/image';
+import Logo from 'public/svgs/common/logo.svg';
 
 import { Link } from '@/i18n/routing';
 
-type Props = {
-  logo: string;
-};
-
-export default function HeaderLogo({ logo }: Props) {
+export default function HeaderLogo() {
   return (
     <Link href="/" className="btn btn-ghost gap-2 px-2 sm:px-4">
-      <div className="relative h-5 w-5 sm:h-7 sm:w-7">
-        <Image src={logo} alt="logo" fill />
-      </div>
-      <div className="header-sticky-change-color font-sen text-xl font-semibold text-black sm:text-2xl">
+      <Logo className="h-5 w-5 fill-primary sm:h-7 sm:w-7" />
+      <div className="font-sen text-xl font-semibold sm:text-2xl">
         exercience
       </div>
     </Link>

@@ -15,7 +15,7 @@ export default function SignIn() {
       >
         <button
           type="submit"
-          className="flex h-10 items-center gap-2 rounded-md border border-gray-300 bg-white px-4 shadow-sm hover:bg-gray-50"
+          className="flex h-10 items-center gap-2 rounded-md border border-gray-300 px-4 shadow-sm hover:bg-gray-50"
         >
           <FcGoogle className="h-[18px] w-[18px]" />
           <div className="text-sm font-medium text-gray-700">

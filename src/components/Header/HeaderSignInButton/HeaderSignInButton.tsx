@@ -7,9 +7,7 @@ export default function HeaderSignInButton() {
 
   return (
     <Link className="btn btn-ghost px-2 sm:px-4" href={'/sign-in'}>
-      <div className="header-sticky-change-color text-sm sm:text-base">
-        {t('title')}
-      </div>
+      <div className="text-sm sm:text-sm">{t('title')}</div>
     </Link>
   );
 }

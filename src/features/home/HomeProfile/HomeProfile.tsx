@@ -13,7 +13,7 @@ export default function HomeProfile() {
   return (
     <Element
       name="profile"
-      className="profile-container flex flex-col items-center justify-center gap-2 px-4 pb-20 pt-[144px] sm:ml-[calc(-50vw+50%)] sm:w-screen"
+      className="profile-container flex flex-col items-center justify-center gap-2 px-4 pb-20 pt-[144px]"
     >
       <div className="content translate-y-[200px] opacity-0">
         <div className="flex sm:w-[1024px]">
@@ -46,7 +46,7 @@ export default function HomeProfile() {
             </div>
           </div>
         </div>
-        <div className="bg-#d12d31 flex gap-2 rounded-2xl bg-stone-50 px-2 py-3 shadow-xl sm:px-6 sm:py-6">
+        <div className="bg-#d12d31 flex gap-2 rounded-2xl bg-base-100 px-2 py-3 shadow-xl sm:px-6 sm:py-6">
           <div className="flex-1">
             <div className="mb-1 text-sm font-bold sm:text-xl">
               {t('educationHistory.title')}

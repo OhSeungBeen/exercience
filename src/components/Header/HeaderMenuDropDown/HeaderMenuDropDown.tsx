@@ -17,7 +17,7 @@ export default function HeaderMenuDropDown({ onScrollTo }: Props) {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="header-sticky-change-color sm: h-5 w-5 sm:h-6 sm:w-6"
+          className="sm: h-5 w-5 sm:h-6 sm:w-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -33,9 +33,9 @@ export default function HeaderMenuDropDown({ onScrollTo }: Props) {
 
       <ul
         tabIndex={0}
-        className="menu dropdown-content menu-sm z-20 mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+        className="menu dropdown-content menu-sm z-20 mt-3 w-52 rounded-box bg-base-200 p-2 shadow"
       >
-        <li>
+        <li className="text-xs sm:text-sm">
           <a
             className="cursor-pointer"
             onClick={() =>
@@ -49,14 +49,19 @@ export default function HeaderMenuDropDown({ onScrollTo }: Props) {
             {t('home')}
           </a>
         </li>
-        <li>
+        <li className="text-xs sm:text-sm">
           <a className="cursor-pointer" onClick={() => onScrollTo('program')}>
             {t('program')}
           </a>
         </li>
-        <li>
+        <li className="text-xs sm:text-sm">
           <a className="cursor-pointer" onClick={() => onScrollTo('profile')}>
             {t('profile')}
+          </a>
+        </li>
+        <li className="text-xs sm:text-sm">
+          <a className="cursor-pointer" onClick={() => onScrollTo('review')}>
+            {t('review')}
           </a>
         </li>
       </ul>

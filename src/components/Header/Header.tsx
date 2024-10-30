@@ -9,6 +9,7 @@ import useScrollPosition from '@react-hook/window-scroll';
 import HeaderMenu from '@/components/Header/HeaderMenu';
 import HeaderMenuDropDown from '@/components/Header/HeaderMenuDropDown';
 import HeaderSignInButton from '@/components/Header/HeaderSignInButton';
+import HeaderThemeSwitcher from '@/components/Header/HeaderThemeSwitcher';
 import HeaderUserAvatar from '@/components/Header/HeaderUserAvatar';
 
 import HeaderLanguageSwitcher from './HeaderLanguageSwitcher';
@@ -47,24 +48,18 @@ export default function Header() {
     <header
       ref={headerRef}
       className={clsx(
-        'navbar justify-between bg-base-100 transition-all duration-300 ease-in-out sm:px-7',
-        isSticky &&
-          'sticky top-0 z-50 bg-primary opacity-90 shadow-xl [&_.header-sticky-change-color]:text-white',
+        'navbar justify-between bg-base-100 bg-opacity-85 transition-all duration-300 ease-in-out sm:px-7',
+        isSticky && 'sticky top-0 z-50 shadow-md backdrop-blur',
       )}
     >
       <div className="flex items-center">
         <HeaderMenuDropDown onScrollTo={onScrollTo} />
-        <HeaderLogo
-          logo={
-            isSticky
-              ? '/images/header/logo-white.png'
-              : '/images/header/logo.png'
-          }
-        />
+        <HeaderLogo />
       </div>
-      <div className="gap-1 sm:gap-6">
+      <div className="sm:gap-16">
         <HeaderMenu onScrollTo={onScrollTo} />
         <div className="flex items-center">
+          <HeaderThemeSwitcher />
           <HeaderLanguageSwitcher languages={languages} />
           {/* {status === 'loading' && (
           <div className="skeleton h-8 min-w-[72px]"></div>

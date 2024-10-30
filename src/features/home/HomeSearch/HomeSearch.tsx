@@ -9,8 +9,8 @@ export default function HomeSearch() {
   const locale = useLocale();
 
   return (
-    <div className="relative flex justify-center bg-home-check-list bg-cover bg-center sm:ml-[calc(-50vw+50%)] sm:w-screen">
-      <div className="absolute inset-0 bg-white opacity-50" />
+    <div className="relative flex justify-center bg-home-check-list bg-cover bg-center">
+      <div className="absolute inset-0 bg-base-100 opacity-50 dark:opacity-90" />
       <div
         className={clsx(
           'z-10 mx-4 flex w-full flex-col items-center gap-2 pt-20 sm:min-h-[800px] sm:w-[1024px] sm:gap-8 sm:pt-40',
@@ -56,7 +56,7 @@ export default function HomeSearch() {
           <Typist.Paste>
             <div
               className={clsx(
-                'text-center text-base font-bold leading-normal text-gray-500 sm:text-[28px] sm:leading-normal',
+                'text-center text-base font-bold leading-normal text-gray-500 dark:text-gray-400 sm:text-[28px] sm:leading-normal',
               )}
             >
               {locale === 'en' && (

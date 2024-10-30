@@ -10,12 +10,12 @@ export default function HeaderMenu({ onScrollTo }: Props) {
   const t = useTranslations('header.menu');
 
   return (
-    <div className="navbar-center hidden text-black lg:flex">
-      <ul className="menu menu-horizontal px-1">
+    <div className="navbar-center hidden lg:flex">
+      <ul className="menu menu-horizontal p-0">
         <li>
           <div
             onClick={() => window.scrollTo({ top: 0 })}
-            className="header-sticky-change-color text-base font-medium text-black"
+            className="btn btn-ghost font-medium"
           >
             {t('home')}
           </div>
@@ -23,7 +23,7 @@ export default function HeaderMenu({ onScrollTo }: Props) {
         <li>
           <div
             onClick={() => onScrollTo('program')}
-            className="header-sticky-change-color text-base font-medium text-black"
+            className="btn btn-ghost font-medium"
           >
             {t('program')}
           </div>
@@ -31,7 +31,7 @@ export default function HeaderMenu({ onScrollTo }: Props) {
         <li>
           <div
             onClick={() => onScrollTo('profile')}
-            className="header-sticky-change-color text-base font-medium text-black"
+            className="btn btn-ghost font-medium"
           >
             {t('profile')}
           </div>
@@ -39,7 +39,7 @@ export default function HeaderMenu({ onScrollTo }: Props) {
         <li>
           <div
             onClick={() => onScrollTo('review')}
-            className="header-sticky-change-color text-base font-medium text-black"
+            className="btn btn-ghost font-medium"
           >
             {t('review')}
           </div>

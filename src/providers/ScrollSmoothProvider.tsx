@@ -15,7 +15,7 @@ type Props = {
   children: ReactNode;
 };
 
-export default function ScrollSmooth({ children }: Props) {
+export default function ScrollSmoothProvider({ children }: Props) {
   const lenisRef = useRef<LenisRef>(null);
 
   useEffect(() => {

@@ -36,10 +36,7 @@ export default function HomeReview() {
   }
 
   return (
-    <Element
-      name="review"
-      className="bg-paper pt-[144px] sm:ml-[calc(-50vw+50%)] sm:w-screen"
-    >
+    <Element name="review" className="bg-paper pt-[144px]">
       <div className="flex flex-col justify-center gap-8">
         <div className="text-center text-2xl font-extrabold sm:text-4xl">
           BEST REVIEW
@@ -53,11 +50,11 @@ export default function HomeReview() {
           spaceBetween={30}
           loop
           centeredSlides
-          // autoplay={{
-          //   delay: 1500,
-          //   disableOnInteraction: false,
-          //   pauseOnMouseEnter: true,
-          // }}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
           breakpoints={{
             '640': { slidesPerView: 2, centeredSlides: true },
             '768': { slidesPerView: 3, centeredSlides: true },

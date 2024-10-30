@@ -9,7 +9,7 @@ type Props = {
 
 export default function HomeReviewCard({ title, writer, content }: Props) {
   return (
-    <div className="card h-[485px] cursor-pointer overflow-hidden break-normal bg-base-100 shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] hover:!-translate-y-2">
+    <div className="card h-[485px] cursor-pointer overflow-hidden break-normal bg-base-200 shadow-md hover:!-translate-y-2">
       <button className="absolute right-3 top-3">
         <MdOpenInNew className="h-5 w-5 text-gray-500" />
       </button>

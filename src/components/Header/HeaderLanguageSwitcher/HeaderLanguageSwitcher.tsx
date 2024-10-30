@@ -29,18 +29,18 @@ export default function HeaderLanguageSwitcher({ languages }: Props) {
             <Image src={language.image} alt={`flag-${language?.locale}`} fill />
           )}
         </div>
-        <div
-          className={`header-sticky-change-color hidden text-xs sm:block sm:text-base`}
+        {/* <div
+          className={`hidden text-xs sm:block sm:text-sm`}
         >
           {language?.label}
         </div>
         <BsChevronDown
-          className={`header-sticky-change-color hidden h-3 w-3 sm:block sm:h-4 sm:w-4`}
-        />
+          className={`hidden h-3 w-3 sm:block sm:h-4 sm:w-4`}
+        /> */}
       </div>
       <ul
         tabIndex={0}
-        className="menu dropdown-content z-20 mt-3 rounded-box bg-base-100 p-2 shadow"
+        className="menu dropdown-content z-20 mt-3 rounded-box bg-base-200 p-2 shadow"
       >
         {languages.map((language) => (
           <li key={language.locale}>
@@ -60,7 +60,7 @@ export default function HeaderLanguageSwitcher({ languages }: Props) {
                   fill
                 />
               </div>
-              <div className="text-xs sm:text-base">{language.label}</div>
+              <div className="text-xs sm:text-sm">{language.label}</div>
             </Link>
           </li>
         ))}

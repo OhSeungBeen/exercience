@@ -23,7 +23,7 @@ export default function HeaderUserAvatar({
       {userImage ? (
         <div tabIndex={0} role="button" className="btn btn-circle btn-ghost">
           <div className="avatar flex cursor-pointer">
-            <div className="relative h-9 w-9 rounded-full sm:h-12 sm:w-12">
+            <div className="relative h-9 w-9 rounded-full sm:h-10 sm:w-10">
               <Image src={userImage} fill alt="user-image" />
             </div>
           </div>
@@ -41,14 +41,14 @@ export default function HeaderUserAvatar({
       )}
       <ul
         tabIndex={0}
-        className="menu dropdown-content z-20 mt-3 rounded-box bg-base-100 p-2 shadow"
+        className="menu dropdown-content z-20 mt-3 rounded-box bg-base-200 p-2 shadow"
       >
         {userRole === 'ADMIN' && (
-          <li>
+          <li className="text-xs sm:text-sm">
             <Link href={'/admin'}>{t('admin')}</Link>
           </li>
         )}
-        <li>
+        <li className="text-xs sm:text-sm">
           <button className="!whitespace-nowrap" onClick={() => signOut()}>
             {t('signOut')}
           </button>
