@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import { BsChevronDown } from 'react-icons/bs';
 import clsx from 'clsx';
 
 import { Link, usePathname } from '@/i18n/routing';

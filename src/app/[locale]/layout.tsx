@@ -1,6 +1,7 @@
 import { type Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
+import clsx from 'clsx';
 
 import { fonts } from '@/app/[locale]/fonts';
 
@@ -10,7 +11,6 @@ import ThemeProvider from '@/providers/ThemeProvider';
 import { TRPCReactProvider } from '@/trpc/react';
 
 import '@/styles/globals.css';
-import clsx from 'clsx';
 
 export async function generateMetadata({
   params: { locale },

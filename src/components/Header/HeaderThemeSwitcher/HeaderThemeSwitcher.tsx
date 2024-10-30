@@ -1,7 +1,6 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 
 export default function HeaderThemeSwitcher() {
   const { theme, setTheme } = useTheme();
