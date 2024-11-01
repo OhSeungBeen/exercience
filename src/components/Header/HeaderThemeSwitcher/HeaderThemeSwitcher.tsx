@@ -23,9 +23,9 @@ export default function HeaderThemeSwitcher() {
       <svg
         viewBox="0 0 24 24"
         fill="none"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className="swap-on h-5 w-5 sm:h-6 sm:w-6"
       >
         <path
@@ -43,8 +43,8 @@ export default function HeaderThemeSwitcher() {
         className="swap-off h-5 w-5 sm:h-6 sm:w-6"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z"
           className="fill-crimson-500/20"
         ></path>
@@ -53,14 +53,12 @@ export default function HeaderThemeSwitcher() {
           className="fill-primary"
         ></path>
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
           className="fill-primary"
         ></path>
       </svg>
-      {/* <MdOutlineLightMode className="swap-on h-5 w-5 fill-current text-base text-primary sm:h-6 sm:w-6" /> */}
-      {/* <MdOutlineDarkMode className="swap-off h-5 w-5 fill-current text-base sm:h-6 sm:w-6" /> */}
     </label>
   );
 }
