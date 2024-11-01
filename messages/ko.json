@@ -130,21 +130,21 @@
       "title": "<strong class='text-primary text-[26px] sm:text-5xl font-extrabold'>exercience </strong>는 <strong class='text-primary text-[26px] sm:text-5xl font-extrabold'>과학적 근거</strong>기반, 개인을 위한 <strong class='text-[26px] sm:text-5xl font-extrabold text-primary'>맞춤 건강 회복운동</strong>을 제공합니다."
     },
     "ptProgram": {
-      "title1": "근골격계 만성통증 회복",
-      "description1": "스포츠 의학 기반 근육 재활 운동 프로그램",
-      "title2": "자세/체형 교정",
-      "description2": "개인 맞춤형 교정 운동 프로그램",
-      "title3": "다이어트 및 근력 향상",
-      "description3": "영양 컨설팅 및 근력 증진 운동 프로그램"
+      "recoveryTitle": "근골격계 만성통증 회복",
+      "recoveryDescription": "스포츠 의학 기반 근육 재활 운동 프로그램",
+      "correctionTitle": "자세/체형 교정",
+      "correctionDescription": "개인 맞춤형 교정 운동 프로그램",
+      "dietTitle": "다이어트 및 근력 향상",
+      "dietDescription": "영양 컨설팅 및 근력 증진 운동 프로그램"
     },
     "trainingProgram": {
-      "title1": "상담/컨설팅",
-      "description1": "History, 운동 목적, 생활 습관 체크",
-      "title2": "평가 및 분석",
-      "description2": "스포츠 의학기반 기능적 검사, 자세, 유연성, 밸런스, 근긴장도 검사",
-      "title3": "맞춤 운동 처방",
-      "title4": "트레이닝",
-      "title5": "재 평가 및 분석"
+      "consultationConsulting": "상담/컨설팅",
+      "consultationConsultingDescription": "History, 운동 목적, 생활 습관 체크",
+      "assessmentAndAnalysis": "평가 및 분석",
+      "assessmentAndAnalysisDescription": "스포츠 의학기반 기능적 검사, 자세, 유연성, 밸런스, 근긴장도 검사",
+      "customizedExercisePrescription": "맞춤 운동 처방",
+      "training": "트레이닝",
+      "reassessmentAnalysis": "재 평가 및 분석"
     },
     "profile": {
       "title": "<strong class='text-primary'>같은 운동</strong>도 건강 운동 전문가를 통하면 <strong class='text-primary'> 다릅니다.</strong>",

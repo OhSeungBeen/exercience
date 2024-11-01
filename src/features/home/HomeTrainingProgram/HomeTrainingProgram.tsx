@@ -69,27 +69,27 @@ export default function HomeTrainingProgram() {
           duration: 1,
           y: 50,
         })
-        .from('.training-program-container .program1', {
+        .from('#consultationConsulting', {
           autoAlpha: 0,
           duration: 1,
           y: 50,
         })
-        .from('.training-program-container .program2', {
+        .from('#assessmentAndAnalysis', {
           autoAlpha: 0,
           duration: 1,
           y: 50,
         })
-        .from('.training-program-container .program3', {
+        .from('#customizedExercisePrescription', {
           autoAlpha: 0,
           duration: 1,
           y: 50,
         })
-        .from('.training-program-container .program4', {
+        .from('#training', {
           autoAlpha: 0,
           duration: 1,
           y: 50,
         })
-        .from('.training-program-container .program5', {
+        .from('#reassessmentAnalysis', {
           autoAlpha: 0,
           duration: 1,
           y: 50,
@@ -112,41 +112,50 @@ export default function HomeTrainingProgram() {
         TRAINING PROGRAM
       </div>
       <div className="flex flex-col gap-8 sm:mx-auto sm:w-[1024px] sm:gap-16">
-        <div className="program1 relative flex items-center gap-4">
+        <div
+          id="consultationConsulting"
+          className="relative flex items-center gap-4"
+        >
           <div>
-            <div className="relative w-[114px] rounded-2xl bg-primary p-2 text-center font-extrabold text-base-100 sm:w-[328px] sm:p-3 sm:text-2xl">
-              {t('title1')}
+            <div className="relative w-[114px] rounded-2xl bg-primary p-2 text-center font-extrabold text-base-100 shadow-md sm:w-[328px] sm:p-3 sm:text-2xl">
+              {t('consultationConsulting')}
             </div>
           </div>
           <div className="flex flex-1 items-center text-sm sm:text-xl">
-            {t('description1')}
+            {t('consultationConsultingDescription')}
           </div>
           <MdArrowDropDown className="absolute -bottom-8 left-[55px] -translate-x-1/2 text-4xl sm:-bottom-14 sm:left-[160px] sm:text-5xl" />
         </div>
-        <div className="program2 relative flex gap-4">
+        <div id="assessmentAndAnalysis" className="relative flex gap-4">
           <div>
-            <div className="relative w-[114px] rounded-2xl bg-primary p-2 text-center font-extrabold text-base-100 sm:w-[328px] sm:p-3 sm:text-2xl">
-              {t('title2')}
+            <div className="relative w-[114px] rounded-2xl bg-primary p-2 text-center font-extrabold text-base-100 shadow-md sm:w-[328px] sm:p-3 sm:text-2xl">
+              {t('assessmentAndAnalysis')}
             </div>
           </div>
           <div className="flex flex-1 items-center text-sm sm:text-xl">
-            {t('description2')}
+            {t('assessmentAndAnalysisDescription')}
           </div>
           <MdArrowDropDown className="absolute -bottom-8 left-[55px] -translate-x-1/2 text-4xl sm:-bottom-14 sm:left-[160px] sm:text-5xl" />
         </div>
         <div className="relative">
-          <div className="program3 relative z-10 w-[114px] rounded-2xl bg-primary p-2 text-center font-extrabold text-base-100 sm:w-[328px] sm:p-3 sm:text-2xl">
-            {t('title3')}
+          <div
+            id="customizedExercisePrescription"
+            className="relative z-10 w-[114px] rounded-2xl bg-primary p-2 text-center font-extrabold text-base-100 shadow-md sm:w-[328px] sm:p-3 sm:text-2xl"
+          >
+            {t('customizedExercisePrescription')}
           </div>
           <Rotate className="rotate absolute bottom-[-98px] left-[70px] z-0 h-[140px] w-[140px] fill-base-content sm:bottom-[-202px] sm:left-[251px] sm:h-[280px] sm:w-[280px]" />
           <div
-            data-aos-offset="-20"
-            className="program4 absolute -bottom-[124px] left-[94px] z-10 w-[114px] rounded-2xl bg-primary p-2 text-center font-extrabold text-base-100 sm:-bottom-[234px] sm:left-[218px] sm:w-[328px] sm:min-w-[232px] sm:p-3 sm:text-2xl"
+            id="training"
+            className="absolute -bottom-[124px] left-[94px] z-10 w-[114px] rounded-2xl bg-primary p-2 text-center font-extrabold text-base-100 shadow-md sm:-bottom-[234px] sm:left-[218px] sm:w-[328px] sm:min-w-[232px] sm:p-3 sm:text-2xl"
           >
-            {t('title4')}
+            {t('training')}
           </div>
-          <div className="program5 absolute -bottom-[34px] left-[140px] z-10 min-w-[114px] rounded-2xl bg-primary p-2 text-center font-extrabold text-base-100 sm:-bottom-[74px] sm:left-[346px] sm:w-[328px] sm:p-3 sm:text-2xl">
-            {t('title5')}
+          <div
+            id="reassessmentAnalysis"
+            className="absolute -bottom-[34px] left-[140px] z-10 min-w-[114px] rounded-2xl bg-primary p-2 text-center font-extrabold text-base-100 shadow-md sm:-bottom-[74px] sm:left-[346px] sm:w-[328px] sm:p-3 sm:text-2xl"
+          >
+            {t('reassessmentAnalysis')}
           </div>
         </div>
       </div>

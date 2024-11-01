@@ -28,21 +28,21 @@
       "title": "<strong class='text-[26px] text-primary text-2xl font-extrabold sm:text-5xl'>exercience</strong> provides <strong class='text-[26px] text-primary text-2xl font-extrabold sm:text-5xl'>scientifically-based</strong> customized <strong class='text-[26px] text-primary text-2xl font-extrabold sm:text-5xl'>recovery exercises</strong> for individuals."
     },
     "ptProgram": {
-      "title1": "Chronic Musculoskeletal Pain Recovery",
-      "description1": "Muscle rehabilitation exercise program based on sports medicine",
-      "title2": "Posture/Body Correction",
-      "description2": "Personalized correction exercise program",
-      "title3": "Diet and Muscle Strength Improvement",
-      "description3": "Nutrition consulting and muscle strength enhancement exercise program"
+      "recoveryTitle": "Chronic Musculoskeletal Pain Recovery",
+      "recoveryDescription": "Muscle rehabilitation exercise program based on sports medicine",
+      "correctionTitle": "Posture/Body Correction",
+      "correctionDescription": "Personalized correction exercise program",
+      "dietTitle": "Diet and Muscle Strength Improvement",
+      "dietDescription": "Nutrition consulting and muscle strength enhancement exercise program"
     },
     "trainingProgram": {
-      "title1": "Consultation Consulting",
-      "description1": "History, exercise goals, lifestyle check",
-      "title2": "Assessment and Analysis",
-      "description2": "Functional tests based on sports medicine, posture, flexibility, balance, muscle tone tests",
-      "title3": "Customized Exercise Prescription",
-      "title4": "Training",
-      "title5": "Reassessment/Analysis"
+      "consultationConsulting": "Consultation Consulting",
+      "consultationConsultingDescription": "History, exercise goals, lifestyle check",
+      "assessmentAndAnalysis": "Assessment and Analysis",
+      "assessmentAndAnalysisDescription": "Functional tests based on sports medicine, posture, flexibility, balance, muscle tone tests",
+      "customizedExercisePrescription": "Customized Exercise Prescription",
+      "training": "Training",
+      "reassessmentAnalysis": "Reassessment/Analysis"
     },
     "profile": {
       "title": "<strong class='text-primary'>The same exercise</strong> is <strong class='text-primary'>different</strong> when guided by a health exercise specialist.",
