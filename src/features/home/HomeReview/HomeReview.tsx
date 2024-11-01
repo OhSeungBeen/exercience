@@ -50,14 +50,14 @@ export default function HomeReview() {
           spaceBetween={30}
           loop
           centeredSlides
-          autoplay={{
-            delay: 1500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
+          // autoplay={{
+          //   delay: 1500,
+          //   disableOnInteraction: false,
+          //   pauseOnMouseEnter: true,
+          // }}
           breakpoints={{
-            '640': { slidesPerView: 2, centeredSlides: true },
-            '768': { slidesPerView: 3, centeredSlides: true },
+            '640': { slidesPerView: 2, centeredSlides: false },
+            '768': { slidesPerView: 2, centeredSlides: false },
             '1024': { slidesPerView: 3, centeredSlides: true },
             '1280': { slidesPerView: 4, centeredSlides: true },
           }}

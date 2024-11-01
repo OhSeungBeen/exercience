@@ -9,9 +9,9 @@ type Props = {
 
 export default function HomeReviewCard({ title, writer, content }: Props) {
   return (
-    <div className="card h-[485px] cursor-pointer overflow-hidden break-normal bg-base-200 shadow-md hover:!-translate-y-2">
+    <div className="card h-[485px] cursor-pointer overflow-hidden break-all bg-base-200 shadow-md hover:!-translate-y-2">
       <button className="absolute right-3 top-3">
-        <MdOpenInNew className="h-5 w-5 text-gray-500" />
+        <MdOpenInNew className="h-5 w-5 text-gray-500 dark:text-gray-400" />
       </button>
       <div className="flex items-center gap-4 px-8 pt-8">
         <div className="avatar placeholder">
@@ -21,7 +21,9 @@ export default function HomeReviewCard({ title, writer, content }: Props) {
         </div>
         <div className="flex flex-1 flex-col justify-center gap-1">
           <div className="text-[13px] font-bold">{title}</div>
-          <div className="text-xs text-gray-500">{writer}</div>
+          <div className="text-xs text-gray-500 dark:text-gray-400">
+            {writer}
+          </div>
           <div className="rating">
             <input
               type="radio"

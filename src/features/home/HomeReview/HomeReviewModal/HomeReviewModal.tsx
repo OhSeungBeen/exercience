@@ -14,7 +14,7 @@ const HomeReviewModal = forwardRef<HTMLDialogElement, Props>(
       <dialog
         ref={ref}
         id="home-review-modal"
-        className="modal modal-top sm:modal-middle"
+        className="modal modal-top break-all sm:modal-middle"
         data-lenis-prevent
       >
         <div className="card modal-box h-screen max-h-screen cursor-pointer overflow-auto break-normal rounded-none bg-base-100 p-0 sm:h-auto sm:max-h-[calc(100vh-5rem)] sm:max-w-96">
