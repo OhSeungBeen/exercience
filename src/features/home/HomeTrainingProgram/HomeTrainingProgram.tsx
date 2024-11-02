@@ -1,8 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useTheme } from 'next-themes';
-import { useReducer, useRef } from 'react';
+import { useRef } from 'react';
 import { MdArrowDropDown } from 'react-icons/md';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
