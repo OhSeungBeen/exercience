@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -36,7 +38,7 @@ export default function HomeExercience() {
   });
 
   return (
-    <div className="exercience-container bg-home-pt relative flex h-screen justify-center bg-cover bg-center">
+    <div className="exercience-container relative flex h-screen justify-center bg-home-pt bg-cover bg-center">
       <div className="absolute inset-0 bg-black opacity-50" />
       <div className="relative z-10 flex aspect-square w-full sm:h-[800px] sm:w-[1024px]">
         <div className="text1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">

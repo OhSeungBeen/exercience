@@ -1,5 +1,3 @@
-'use client';
-
 import HomeExercience from '@/features/home/HomeExercience';
 import HomeProfile from '@/features/home/HomeProfile';
 import HomePtProgram from '@/features/home/HomePtProgram';

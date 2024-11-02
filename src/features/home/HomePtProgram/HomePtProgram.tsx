@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import { Element } from 'react-scroll';
 import gsap from 'gsap';

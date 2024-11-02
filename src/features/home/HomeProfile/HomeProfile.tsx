@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Element } from 'react-scroll';
@@ -10,12 +12,45 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 export default function HomeProfile() {
   const t = useTranslations('home.profile');
 
+  useGSAP(() => {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '.profile-container',
+        start: 'top bottom',
+        onEnter: (self) => {
+          gsap.to([self.trigger], {
+            onStart: () => {
+              self.trigger?.classList.add('bg-secondary');
+            },
+          });
+          gsap.to('.profile-container .content', {
+            autoAlpha: 1,
+            duration: 1,
+            y: 0,
+          });
+        },
+        onLeaveBack: (self) => {
+          gsap.to([self.trigger], {
+            onStart: () => {
+              self.trigger?.classList.add('bg-base-100');
+            },
+          });
+          gsap.to('.profile-container .content', {
+            autoAlpha: 0,
+            duration: 1,
+            y: 200,
+          });
+        },
+      },
+    });
+  });
+
   return (
     <Element
       name="profile"
       className="profile-container flex flex-col items-center justify-center gap-2 px-4 pb-20 pt-[144px]"
     >
-      <div className="content translate-y-[200px] opacity-0">
+      <div className="content translate-y-[200px]">
         <div className="flex sm:w-[1024px]">
           <div className="flex flex-1 flex-col justify-end">
             <div className="profile-image relative z-10 aspect-[190/271] w-full">
