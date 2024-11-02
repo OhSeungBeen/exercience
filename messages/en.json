@@ -69,7 +69,7 @@
       }
     },
     "review": {
-      "title": "These are genuine reviews written by actual members."
+      "description": "These are genuine reviews written by actual members."
     }
   },
   "signIn": {
